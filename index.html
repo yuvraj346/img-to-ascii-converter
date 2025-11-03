@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image → ASCII Art Converter | UV Tools</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Y</div>
+    <h1>Image → ASCII Art Converter</h1>
+  </header>
+
+  <main class="container">
+    <section class="uploader">
+      <label for="imageInput" class="upload-label">
+        <span>📁 Choose an image</span>
+        <input type="file" id="imageInput" accept="image/*" hidden />
+      </label>
+
+      <div class="controls">
+        <label for="outputSize">Output Size:</label>
+        <select id="outputSize">
+          <option value="small">Small (50x40)</option>
+          <option value="medium" selected>Medium (100x80)</option>
+          <option value="large">Large (150x120)</option>
+        </select>
+      </div>
+    </section>
+
+    <canvas id="imageCanvas" style="display: none;"></canvas>
+
+    <section class="ascii-section">
+      <pre id="asciiOutput" class="ascii-box"></pre>
+    </section>
+
+    <div class="button-container">
+      <button id="copyBtn" class="btn hidden"> Copy ASCII</button>
+      <button id="downloadBtn" class="btn hidden"> Download</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Developed by <span class="highlight">UV</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
